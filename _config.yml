@@ -1,0 +1,22 @@
+title: "Intro to the Command Line"
+description: "A gentle, practical intro to the command line for analysts and engineers."
+theme: jekyll-theme-cayman
+markdown: kramdown
+
+# For nicer URLs (optional)
+permalink: /:title/
+
+# Navigation links that we’ll render manually in index.md
+lesson_links:
+  - title: "1. What is the Command Line?"
+    url: /lessons/01_what-is-cli.html
+  - title: "2. Moving Around (cd, pwd, ls)"
+    url: /lessons/02_navigation.html
+  - title: "3. Working with Files & Directories"
+    url: /lessons/03_files-and-dirs.html
+  - title: "4. Redirection & Pipes"
+    url: /lessons/04_redirection-pipes.html
+  - title: "5. Aliases & Simple Scripts"
+    url: /lessons/05_aliases-scripts.html
+  - title: "6. Quick Reference & Next Steps"
+    url: /lessons/06_cheatsheet.html
