@@ -265,6 +265,21 @@ Using `demo.csv` from earlier:
 
 *(Hint: combine `grep`, `wc -l`, and `>`.)*
 
+One possible solution:
+
+```bash
+cd ~/cli-practice
+
+# 1. Show only lines containing PE123
+grep "PE123" demo.csv
+
+# 2. Count how many lines contain JAN
+grep "JAN" demo.csv | wc -l
+
+# 3. Save all JAN lines to demo_JAN.csv
+grep "JAN" demo.csv > demo_JAN.csv
+```
+
 ### Exercise 3: Sort and Inspect
 
 1. Create a small file:
