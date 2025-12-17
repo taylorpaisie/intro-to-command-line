@@ -309,15 +309,53 @@ grep "JAN" demo.csv > demo_JAN.csv
 
 ## Quick Reference
 
-| Operator / Command | What it does | Example |
-|--------------------|-------------|---------|
-| `>` | Redirect output (overwrite file) | `echo "Hi" > file.txt` |
-| `>>` | Redirect output (append) | `echo "Hi" >> file.txt` |
-| `|` | Pipe output to another command | `ls -lt | head` |
-| `grep` | Filter lines by text | `grep "PE123" demo.csv` |
-| `wc -l` | Count lines | `grep "JAN" demo.csv \| wc -l` |
-| `sort` | Sort lines | `sort demo.csv` |
-| `head` | Show first lines | `head -n 5 demo.csv` |
+<table>
+   <thead>
+      <tr>
+         <th>Operator / Command</th>
+         <th>What it does</th>
+         <th>Example</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td><code>&gt;</code></td>
+         <td>Redirect output (overwrite file)</td>
+         <td><code>echo "Hi" &gt; file.txt</code></td>
+      </tr>
+      <tr>
+         <td><code>&gt;&gt;</code></td>
+         <td>Redirect output (append)</td>
+         <td><code>echo "Hi" &gt;&gt; file.txt</code></td>
+      </tr>
+      <tr>
+         <td><code>|</code></td>
+         <td>Pipe output to another command</td>
+         <td><code>ls -lt | head</code></td>
+      </tr>
+      <tr>
+         <td><code>grep</code></td>
+         <td>Filter lines by text</td>
+         <td><code>grep "PE123" demo.csv</code></td>
+      </tr>
+      <tr>
+         <td><code>wc -l</code></td>
+         <td>Count lines</td>
+         <td><code>grep "JAN" demo.csv | wc -l</code></td>
+      </tr>
+      <tr>
+         <td><code>sort</code></td>
+         <td>Sort lines</td>
+         <td><code>sort demo.csv</code></td>
+      </tr>
+      <tr>
+         <td><code>head</code></td>
+         <td>Show first lines</td>
+         <td><code>head -n 5 demo.csv</code></td>
+      </tr>
+   </tbody>
+</table>
+
 ---
 
 ## Next Steps
