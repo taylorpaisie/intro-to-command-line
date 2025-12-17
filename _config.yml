@@ -1,12 +1,7 @@
 title: "Intro to the Command Line"
 description: "A gentle, practical intro to the command line for analysts and engineers."
+theme: jekyll-theme-cayman
 markdown: kramdown
-
-# Use the Minimal Mistakes theme via GitHub remote theme
-remote_theme: "mmistakes/minimal-mistakes"
-
-# Minimal Mistakes visual skin (options include "default", "air", "aqua", etc.)
-minimal_mistakes_skin: "air"
 
 # For nicer URLs (optional)
 permalink: /:title/
