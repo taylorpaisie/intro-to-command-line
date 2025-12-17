@@ -1,124 +1,156 @@
 ---
 layout: default
-title: 0. Windows Setup
+title: 0. Windows + WSL Setup
 ---
 
-# 0. Windows Setup (PowerShell)
+# 0. Windows + WSL Setup (Ubuntu)
 
-This short setup page is for our team at Technomics/Navy BFM, where everyone is on Windows. The goal is simple:
+This setup page is for our team at Technomics/Navy BFM, where everyone is on Windows.
 
-- Make sure you can open a terminal
-- Use a modern shell (PowerShell)
-- Be ready to follow the rest of the lessons
+In this course we’ll use **WSL (Windows Subsystem for Linux)** with **Ubuntu**. That gives us a standard Linux command line (bash) while still working on our Windows machines.
+
+Goal:
+
+- Install WSL + Ubuntu (if needed)
+- Open an Ubuntu terminal
+- Create a `cli-practice` folder inside WSL
 
 You only need to do this once per machine.
 
 ---
 
-## 1. Open PowerShell (or Windows Terminal)
-
-You have two good options. Either is fine for this course.
-
-### Option A: Windows PowerShell
+## 1. Check if WSL/Ubuntu is Already Installed
 
 1. Press **Windows key**.
-2. Type **"PowerShell"**.
-3. Click **Windows PowerShell**.
+2. Type **"Ubuntu"**.
+3. If you see an app like **Ubuntu** or **Ubuntu 22.04 LTS**, click it.
 
-You should see a window that looks like:
+If a terminal window opens and you see something like:
 
-```powershell
-PS C:\Users\yourname>
+```bash
+username@machinename:~$
 ```
 
-### Option B: Windows Terminal (Recommended)
+then you already have WSL + Ubuntu. Skip to **Step 3**.
 
-If you have **Windows Terminal** installed:
-
-1. Press **Windows key**.
-2. Type **"Windows Terminal"**.
-3. Open it and make sure the tab says **PowerShell**.
-
-If it opens something else (like Command Prompt), use the menu in the title bar to switch to **PowerShell**.
+If you don’t see Ubuntu, continue to the next step to install WSL.
 
 ---
 
-## 2. Check Your Current Folder
+## 2. Install WSL + Ubuntu (One-Time)
 
-In PowerShell, type this and press **Enter**:
+You may need local admin rights for this step. If you’re not sure, coordinate with IT.
+
+1. Press **Windows key**.
+2. Type **"PowerShell"**.
+3. Right-click **Windows PowerShell** and choose **"Run as administrator"**.
+4. In the PowerShell window, run:
 
 ```powershell
+wsl --install
+```
+
+5. If prompted, restart your computer.
+6. After restart, Windows will finish installing Ubuntu and ask you to create a **UNIX username** and **password**. This is just for WSL (not your Navy network account).
+
+When it’s done, you should have an **Ubuntu** app available from the Start menu.
+
+---
+
+## 3. Open Ubuntu (WSL)
+
+Each time you want to use the command line for this course:
+
+1. Press **Windows key**.
+2. Type **"Ubuntu"**.
+3. Open the **Ubuntu** app.
+
+You should see a prompt like:
+
+```bash
+username@machinename:~$
+```
+
+This is your **Linux home folder** inside WSL.
+
+---
+
+## 4. Check Your Current Folder
+
+In Ubuntu, type this and press **Enter**:
+
+```bash
 pwd
 ```
 
 You should see something like:
 
 ```text
-Path
-----
-C:\Users\yourname
+/home/yourname
 ```
 
-This tells you **where** you are in the file system. We’ll use this a lot.
+This tells you **where** you are in the WSL file system. We’ll use this a lot in later lessons.
 
 ---
 
-## 3. Create a Practice Folder
+## 5. Create a Practice Folder in WSL
 
 We’ll use a simple folder for all examples so we don’t touch anything important.
 
-In PowerShell, run:
+In Ubuntu, run:
 
-```powershell
-cd C:\Users\yourname\Documents
-mkdir cli-practice
-cd cli-practice
-```
-
-Replace `yourname` with your actual Windows username if needed. After this, check where you are:
-
-```powershell
+```bash
+mkdir -p ~/cli-practice
+cd ~/cli-practice
 pwd
 ```
 
-You should see a path ending in `Documents\\cli-practice`.
+You should see a path ending in `/home/yourname/cli-practice`.
 
-If `cd C:\Users\yourname\Documents` doesn’t work, try just:
-
-```powershell
-cd ~\Documents
-mkdir cli-practice
-cd cli-practice
-```
-
-(`~` is shorthand for your home folder.)
+From now on, whenever lessons mention a folder, assume we’re working in this `~/cli-practice` folder inside WSL.
 
 ---
 
-## 4. Create a Test File
+## 6. (Optional) View the Folder from Windows
+
+If you want to see the same files in File Explorer:
+
+1. In Ubuntu, type:
+
+```bash
+explorer.exe .
+```
+
+2. File Explorer will open, showing the WSL folder. You’ll see `cli-practice` there.
+
+This is a nice way to verify that the command line and Windows Explorer are looking at the same files.
+
+---
+
+## 7. Create a Test File
 
 Let’s confirm everything works by creating a small text file.
 
-From inside `cli-practice`, run:
+From inside `~/cli-practice`, run:
 
-```powershell
-echo "Hello from the command line" > hello.txt
+```bash
+echo "Hello from WSL" > hello.txt
 ls
 ```
 
 You should see `hello.txt` listed.
 
-If you open File Explorer and browse to **Documents → cli-practice**, you’ll see the same file there. This is the bridge between clicking and the command line.
+If you ran `explorer.exe .` earlier, you’ll see `hello.txt` in File Explorer too.
 
 ---
 
-## 5. Summary
+## 8. Summary
 
 You’re ready for the rest of the course if:
 
-- You can open **PowerShell** or **Windows Terminal**
+- You can open the **Ubuntu (WSL)** terminal
 - `pwd` and `ls` work without errors
-- You created a `cli-practice` folder and `hello.txt` inside it
+- You created a `~/cli-practice` folder and `hello.txt` inside it
 
 If something didn’t work, take a screenshot or copy the error text and share it with the team so we can troubleshoot together.
 
