@@ -7,38 +7,43 @@ title: 1. What is the Command Line?
 
 The **command line** (also called *terminal*, *console*, or *shell*) is a text-based interface for interacting with your computer. Instead of clicking through folders and menus with your mouse, you type commands directly.
 
-Think of it as having a conversation with your computer using text commands instead of pointing and clicking.
+For our Navy BFM / Power BI work, think of it as a fast, repeatable way to:
+- Get data files where you need them
+- Clean or reorganize folders full of CSVs
+- Run the same steps every time before you refresh a report
 
 ---
 
 ## Why Learn the Command Line?
 
-You might be thinking: *"Why would I type commands when I can just click?"* Great question! Here's why the command line is worth learning:
+You might be thinking: *"Why would I type commands when I can just click in File Explorer or Power BI?"* Here's why it's worth it for our team:
 
 ### 1. **Speed & Efficiency**
 Once you know a few commands, tasks that take multiple clicks can be done in seconds:
-- Rename 100 files at once
-- Search through thousands of documents
-- Process data files without opening them
+- Rename 100 monthly files like `BFM_FY25_M01.csv`, `BFM_FY25_M02.csv`, etc.
+- Search across thousands of CSVs or text files for a specific PE or UIC
+- Quickly see which files changed before a data refresh
 
-### 2. **Automation**
-Repetitive tasks can be automated with scripts:
-- Run the same data processing steps every week
-- Batch convert files
-- Set up scheduled tasks
+### 2. **Automation & Repeatability**
+Repetitive steps can be turned into a simple script and rerun whenever needed:
+- Pre-process or copy data files before refreshing a Power BI report
+- Standardize file names and folder layouts for new reporting cycles
+- Run the same data-cleanup steps every month or quarter
 
 ### 3. **Power & Precision**
-Many professional tools only work from the command line:
-- Git (version control)
-- Python scripts and data pipelines
-- Database queries
-- Cloud services (AWS, Azure)
+Many professional tools we rely on are built around the command line:
+- Git (version control) for tracking changes to models, measures, and documentation
+- Python/R scripts and data pipelines that feed Power BI
+- Database and server tools used by IT and data teams
 
 ### 4. **Universal Skill**
-Whether you're on Windows, Mac, or Linux, command line skills transfer. It's the common language across all operating systems.
+Whether you're on Windows, Mac, or Linux, command line skills transfer. It's the common language across all operating systems and teams (devs, data engineers, analysts).
 
-### 5. **Troubleshooting**
-When things go wrong, the command line often provides more detailed information and more powerful tools to fix problems.
+### 5. **Troubleshooting & Transparency**
+When something breaks, the command line often gives more detail:
+- Check where a file actually lives when Power BI can't find it
+- Inspect logs or error output from scripts and tools
+- Run quick checks without waiting on a full UI to load
 
 ---
 
@@ -59,14 +64,14 @@ You'll hear several terms used interchangeably. Here's what they mean:
 
 When you open a terminal, you'll see something like this:
 
-**On Mac/Linux (bash/zsh):**
-```bash
-username@computername:~$
-```
-
 **On Windows (PowerShell):**
 ```powershell
 PS C:\Users\username>
+```
+
+**On Mac/Linux (bash/zsh):**
+```bash
+username@computername:~$
 ```
 
 This is called the **prompt**. It's waiting for you to type a command.
