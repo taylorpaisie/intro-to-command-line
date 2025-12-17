@@ -397,7 +397,7 @@ cd My Documents
 
 The shell thinks you are trying to `cd` into **two** separate things: `My` and `Documents`.
 
-![Demo: handling spaces in directory names](/images/you-didnt-say-the-magic-word-ah-ah.gif)
+![Demo: handling spaces in directory names](../images/you-didnt-say-the-magic-word-ah-ah.gif)
 
 *GIF: `cd` failing without quotes, then working with quotes / Tab completion.*
 
