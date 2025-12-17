@@ -315,10 +315,9 @@ grep "JAN" demo.csv > demo_JAN.csv
 | `>>` | Redirect output (append) | `echo "Hi" >> file.txt` |
 | `|` | Pipe output to another command | `ls -lt | head` |
 | `grep` | Filter lines by text | `grep "PE123" demo.csv` |
-| `wc -l` | Count lines | `grep "JAN" demo.csv | wc -l` |
+| `wc -l` | Count lines | `grep "JAN" demo.csv \| wc -l` |
 | `sort` | Sort lines | `sort demo.csv` |
 | `head` | Show first lines | `head -n 5 demo.csv` |
-|
 ---
 
 ## Next Steps
