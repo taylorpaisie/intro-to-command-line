@@ -9,7 +9,7 @@ Welcome! This mini-course is aimed at analysts, engineers, and project staff who
 
 By the end, you’ll be able to:
 
-- Open a terminal on your machine (Windows, macOS, or Linux)
+- Open a terminal on your machine (primarily Windows/PowerShell for our team)
 - Navigate folders with commands instead of clicking
 - Create, inspect, and edit files
 - Chain commands together to do real work quickly
@@ -21,6 +21,7 @@ No prior experience required. If you can type and hit Enter, you’re qualified.
 
 ## Lessons
 
+0. [Windows Setup (PowerShell)](lessons/00_windows-setup.md)  
 1. [What is the Command Line?](lessons/01_what-is-cli.md)  
 2. [Moving Around (cd, pwd, ls)](lessons/02_navigation.md)  
 3. [Working with Files & Directories](lessons/03_files-and-dirs.md)  
