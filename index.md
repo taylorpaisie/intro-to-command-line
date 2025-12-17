@@ -9,7 +9,7 @@ Welcome! This mini-course is aimed at analysts, engineers, and project staff who
 
 By the end, you’ll be able to:
 
-- Open a terminal on your machine (primarily Windows/PowerShell for our team)
+- Open a terminal on your machine (Windows with WSL/Ubuntu for our team)
 - Navigate folders with commands instead of clicking
 - Create, inspect, and edit files
 - Chain commands together to do real work quickly
@@ -21,7 +21,7 @@ No prior experience required. If you can type and hit Enter, you’re qualified.
 
 ## Lessons
 
-0. [Windows Setup (PowerShell)](lessons/00_windows-setup.md)  
+0. [Windows + WSL Setup (Ubuntu)](lessons/00_windows-setup.md)  
 1. [What is the Command Line?](lessons/01_what-is-cli.md)  
 2. [Moving Around (cd, pwd, ls)](lessons/02_navigation.md)  
 3. [Working with Files & Directories](lessons/03_files-and-dirs.md)  
@@ -40,7 +40,7 @@ No prior experience required. If you can type and hit Enter, you’re qualified.
   - 20 min: Pipes + redirection
   - 20 min: Aliases + mini scripts
 - You can ask everyone to follow along using:
-  - **Windows**: PowerShell or Git Bash (or WSL if they have it)
+  - **Windows**: Ubuntu on WSL (primary), PowerShell only for initial setup
   - **macOS / Linux**: Terminal app (bash/zsh)
 
 You can later add a “Workshop Logistics” page if you want (pre-req installs, etc).
