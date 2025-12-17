@@ -384,21 +384,40 @@ cd Documnets
 - Use Tab completion to avoid typos
 - Remember that names are case-sensitive on Mac/Linux
 
-### Spaces in Directory Names
+### Spaces in Directory Names (VERY Important)
 
-**Problem**: Directory names with spaces can be tricky.
+This is one of the most common gotchas for new CLI users.
+
+**Problem**: Directory names with spaces behave like **separate words** unless you quote or escape them.
 
 ```bash
 cd My Documents
 # bash: cd: My: No such file or directory
 ```
 
-**Solutions**:
+The shell thinks you are trying to `cd` into **two** separate things: `My` and `Documents`.
+
+**Safe patterns (pick one and stick with it):**
+
 ```bash
-cd "My Documents"        # Use quotes
-cd My\ Documents         # Escape the space with backslash
-cd My[Tab]               # Use Tab completion (adds quotes automatically)
+cd "My Documents"        # 1) Use double quotes around the whole path
+cd My\ Documents         # 2) Escape the space with a backslash
+cd My[Tab]               # 3) Type part of the name, then press Tab
 ```
+
+For this course, whenever you see a folder like `My Documents` or `BFM Reports FY25`, **assume you must either quote it or escape spaces**:
+
+```bash
+cd "BFM Reports FY25"
+cd BFM\ Reports\ FY25
+```
+
+If a `cd` command ever fails and you see `No such file or directory`, first check:
+
+- Does the folder name contain spaces?
+- Did you forget quotes or backslashes?
+
+When in doubt, use **Tab completion** – it will add the right quoting/escaping for you.
 
 ### "Permission denied"
 
