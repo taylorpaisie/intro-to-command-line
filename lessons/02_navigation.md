@@ -419,6 +419,15 @@ If a `cd` command ever fails and you see `No such file or directory`, first chec
 
 When in doubt, use **Tab completion** – it will add the right quoting/escaping for you.
 
+**Best practice:** whenever you create new folders or files for work, try to **avoid spaces in names** entirely. Use dashes or underscores instead:
+
+```bash
+mkdir BFM_Reports_FY25
+mkdir bfm-reports-fy25
+```
+
+These are easier to work with in the command line, scripts, and many tools.
+
 ### "Permission denied"
 
 **Problem**: You don't have permission to access that directory.
