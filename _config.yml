@@ -1,6 +1,6 @@
 title: "Intro to the Command Line"
 description: "A gentle, practical intro to the command line for analysts and engineers."
-theme: jekyll-theme-cayman
+theme: jekyll-theme-freelancer
 markdown: kramdown
 
 # For nicer URLs (optional)
