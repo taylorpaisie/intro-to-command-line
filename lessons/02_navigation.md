@@ -5,9 +5,11 @@ title: 2. Moving Around (cd, pwd, ls)
 
 # 2. Moving Around (cd, pwd, ls)
 
-When working in the command line, you're always "inside" a folder (directory). Understanding where you are and how to navigate is fundamental to using the terminal effectively.
+In the command line, you're always "inside" a folder (directory). Understanding where you are and how to navigate is fundamental to using the terminal effectively.
 
-Think of it like this: when you use File Explorer (Windows) or Finder (Mac), you click through folders. In the command line, you use commands to move around instead.
+For this course, we assume you're using **Ubuntu on WSL** on a Windows machine, and that you've already created the `~/cli-practice` folder from the setup lesson.
+
+Think of it like this: when you use File Explorer, you click through folders. In the command line, you use commands to move around instead.
 
 In this lesson, we'll learn the three essential navigation commands:
 - `pwd` – **P**rint **W**orking **D**irectory (Where am I?)
@@ -22,12 +24,12 @@ Before we dive into commands, let's understand how computers organize files.
 
 ### The File System Tree
 
-Your file system is organized like an upside-down tree:
-- The **root** is at the top (represented by `/` on Mac/Linux, or `C:\` on Windows)
+Your (Linux/WSL) file system is organized like an upside-down tree:
+- The **root** is at the top (represented by `/`)
 - **Directories** (folders) branch off from the root
 - Files and subdirectories live inside directories
 
-**Example structure:**
+**Example structure (Ubuntu / WSL):**
 ```
 /                           (root)
 ├── home/                   (directory)
@@ -44,8 +46,7 @@ Your file system is organized like an upside-down tree:
 ### Absolute vs Relative Paths
 
 **Absolute path**: The complete path from the root directory
-- Linux/Mac: `/home/tpaisie/Documents/reports`
-- Windows: `C:\Users\tpaisie\Documents\reports`
+- Ubuntu/WSL: `/home/tpaisie/Documents/reports`
 
 **Relative path**: The path from your current location
 - If you're in `/home/tpaisie/`, then `Documents/reports` is the relative path
@@ -74,14 +75,9 @@ pwd
 
 ### Example Output
 
-**On Mac/Linux:**
+**In Ubuntu/WSL (and Mac/Linux):**
 ```
 /home/tpaisie/Documents/projects
-```
-
-**On Windows (PowerShell):**
-```
-C:\Users\tpaisie\Documents\projects
 ```
 
 ### When to use `pwd`
@@ -197,12 +193,6 @@ ls ~/Desktop
 ls /usr/local
 ```
 
-### Windows PowerShell Note
-
-In PowerShell, `ls` is an alias for `Get-ChildItem`. It works similarly but has slightly different output formatting. You can also use:
-- `dir` (traditional Windows command)
-- `Get-ChildItem` (full PowerShell command)
-
 ---
 
 ## Go somewhere else (`cd`)
@@ -246,7 +236,7 @@ cd ~
 cd
 ```
 
-On Mac/Linux, both work. On Windows, use `cd ~` or `cd $HOME`.
+On Ubuntu/WSL and Mac/Linux, both work.
 
 #### Go to the root directory
 
@@ -266,7 +256,6 @@ This is like a "back" button—it takes you to wherever you were before.
 
 ```bash
 cd /home/tpaisie/Documents
-cd C:\Users\tpaisie\Documents        # Windows
 ```
 
 #### Combine with `..` and subdirectories
@@ -330,46 +319,51 @@ cd ~
 
 ## Practice Exercises
 
-Try these exercises to build your navigation skills:
+Try these exercises in your **Ubuntu/WSL terminal**, using the `~/cli-practice` folder you created in the setup lesson.
 
-### Exercise 1: Explore Your Home Directory
+### Exercise 1: Explore Your Practice Folder
 ```bash
-cd ~              # Go to your home directory
-pwd               # Confirm where you are
-ls                # See what's there
-ls -lh            # See details with file sizes
+cd ~/cli-practice   # Go to your practice folder
+pwd                 # Confirm where you are
+ls                  # See what's there
+ls -lh              # See details with file sizes
 ```
 
-### Exercise 2: Navigate Down and Up
+If the folder is empty, that's fine.
+
+### Exercise 2: Create and Navigate Subfolders
 ```bash
-cd Documents      # Go into Documents (if you have it)
-pwd               # Check your location
-cd ..             # Go back up
-pwd               # Confirm you're back
+cd ~/cli-practice   # Ensure you're in the practice folder
+mkdir data reports  # Create two subdirectories
+ls                  # Confirm they exist
+cd data             # Go into data
+pwd                 # Check your location
+cd ..               # Go back up to cli-practice
+pwd
 ```
 
 ### Exercise 3: Use Relative Paths
 ```bash
-cd ~              # Start at home
-cd Documents      # Go into Documents
-cd ../Desktop     # Go up one level, then into Desktop
-pwd               # See where you ended up
+cd ~/cli-practice   # Start at practice folder
+cd data             # Go into data
+cd ../reports       # Go up one level, then into reports
+pwd                 # See where you ended up
 ```
 
 ### Exercise 4: List Hidden Files
 ```bash
-cd ~              # Go to home directory
-ls                # See visible files
-ls -a             # See ALL files (including hidden)
+cd ~                # Go to home directory
+ls                  # See visible files
+ls -a               # See ALL files (including hidden)
 ```
 
 ### Exercise 5: Jump Around
 ```bash
-cd /              # Go to root
-pwd               # Check location
-cd ~              # Jump to home
-cd -              # Jump back to root
-cd -              # Jump back to home
+cd /                # Go to root
+pwd                 # Check location
+cd ~/cli-practice   # Jump to practice folder
+cd -                # Jump back to root
+cd -                # Jump back to cli-practice
 ```
 
 ---
@@ -415,7 +409,7 @@ cd /root
 # bash: cd: /root: Permission denied
 ```
 
-**Solution**: Some directories are restricted. You may need administrator privileges (use `sudo` on Mac/Linux, or run PowerShell as Administrator on Windows).
+**Solution**: Some directories are restricted. You may need administrator privileges (use `sudo` in Ubuntu/WSL or Mac/Linux). For this course, you can usually just work in your home folder and `~/cli-practice`.
 
 ### Lost in the File System
 

@@ -8,7 +8,7 @@ permalink: /:title/
 
 # Navigation links that we’ll render manually in index.md
 lesson_links:
-  - title: "0. Windows Setup (PowerShell)"
+  - title: "0. Windows + WSL Setup (Ubuntu)"
     url: /lessons/00_windows-setup.html
   - title: "1. What is the Command Line?"
     url: /lessons/01_what-is-cli.html
