@@ -9,6 +9,8 @@ This setup page is for our team at Technomics/Navy BFM, where everyone is on Win
 
 In this course we’ll use **WSL (Windows Subsystem for Linux)** with **Ubuntu**. That gives us a standard Linux command line (bash) while still working on our Windows machines.
 
+> **Important:** Installing WSL requires **administrator approval/rights** on your laptop. If you don’t have admin access, you’ll need IT (or whoever manages your machines) to approve or perform the install.
+
 Goal:
 
 - Install WSL + Ubuntu (if needed)
@@ -37,9 +39,9 @@ If you don’t see Ubuntu, continue to the next step to install WSL.
 
 ---
 
-## 2. Install WSL + Ubuntu (One-Time)
+## 2. Install WSL + Ubuntu (One-Time, Admin Required)
 
-You may need local admin rights for this step. If you’re not sure, coordinate with IT.
+This step **must** be done by someone with administrator rights on your machine (you or IT). If you’re not sure whether you have admin access, assume you **don’t** and coordinate with IT before proceeding.
 
 1. Press **Windows key**.
 2. Type **"PowerShell"**.
