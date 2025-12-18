@@ -1,0 +1,38 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Add a copy button to all fenced code blocks (pre > code) */
+pre {
+  position: relative;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid currentColor;
+  border-radius: 0.25rem;
+  background: transparent;
+  color: inherit;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.copy-code-button:hover,
+.copy-code-button:focus {
+  opacity: 1;
+}
+
+.copy-code-button:active {
+  transform: translateY(1px);
+}
+
+.copy-code-button[disabled] {
+  opacity: 0.45;
+  cursor: default;
+}
