@@ -5,6 +5,8 @@ title: Intro to the Command Line
 
 # Intro to the Command Line
 
+![Hamilton working hard at command line](images/IMG_4858.JPG)
+
 Welcome! This mini-course is aimed at analysts, engineers, and project staff who mostly live in Excel, PowerPoint, or Power BI and want to get comfortable with the command line.
 
 By the end, you’ll be able to:
