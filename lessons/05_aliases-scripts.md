@@ -167,7 +167,22 @@ chmod +x count_rows.sh
 
 ### 4. Run the script
 
-Make sure you have some CSVs in `~/cli-practice/data/FY25` (from earlier lessons). Then run:
+Make sure you have some CSVs in `~/cli-practice/data/FY25`.
+
+If you created the files with `touch` in Lesson 4, they’ll be **empty**, so the script will show `0` rows. Add a little sample content first:
+
+```bash
+cd ~/cli-practice/data/FY25
+
+for m in 01 02 03; do
+   f="bfm_fy25_m${m}.csv"
+   printf "PE,Month,Amount\n" > "$f"
+   printf "PE123,M${m},100000\n" >> "$f"
+   printf "PE456,M${m},75000\n" >> "$f"
+done
+```
+
+Now run:
 
 ```bash
 ./count_rows.sh
@@ -178,10 +193,12 @@ You should see output like:
 ```text
 Row counts for CSV files in /home/yourname/cli-practice/data/FY25:
 
-bfm_fy25_m01.csv: 12 rows
-bfm_fy25_m02.csv: 15 rows
+bfm_fy25_m01.csv: 3 rows
+bfm_fy25_m02.csv: 3 rows
 ...
 ```
+
+Note: this is a **line count** (so it includes the header row). If you want “data rows only”, you can subtract 1.
 
 This is a tiny example of automating a pre-refresh data check.
 

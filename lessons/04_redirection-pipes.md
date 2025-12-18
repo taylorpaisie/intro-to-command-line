@@ -95,6 +95,16 @@ touch bfm_fy25_m01.csv bfm_fy25_m02.csv bfm_fy25_m03.csv
 ls
 ```
 
+Note: `touch` creates **empty files** (0 bytes). That’s intentional here — we just need a few filenames to practice `ls`, redirection, and loops. If you run `wc -l` on these files, you’ll get `0` until you add data.
+
+If you want them to look more like “real” CSVs, add a header row:
+
+```bash
+printf "PE,Month,Amount\n" > bfm_fy25_m01.csv
+printf "PE,Month,Amount\n" > bfm_fy25_m02.csv
+printf "PE,Month,Amount\n" > bfm_fy25_m03.csv
+```
+
 Now save a list of just the `.csv` files into a text file:
 
 ```bash
