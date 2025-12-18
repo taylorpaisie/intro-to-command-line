@@ -276,11 +276,25 @@ cd ~/cli-practice/projects/bfm_dashboard
 
 echo "Run,Status" > refresh_log.csv
 echo "1,Success" >> refresh_log.csv
-
-a) Use cat to view the file
-b) Use head to show just the first line
-c) Use tail to show the last line
 ```
+
+Now inspect the file without opening Excel:
+
+1. View the whole file with `cat`:
+
+    ```bash
+    cat refresh_log.csv
+    ```
+2. Show just the first line (the header) with `head`:
+
+    ```bash
+    head -n 1 refresh_log.csv
+    ```
+3. Show just the last line with `tail`:
+
+    ```bash
+    tail -n 1 refresh_log.csv
+    ```
 
 ### Exercise 3: Rename and Move
 
@@ -343,4 +357,4 @@ ls ~/cli-practice
 
 Now that you can create, inspect, move, and delete files and directories, you’re ready to learn how to **chain commands together** using redirection and pipes.
 
-Continue to: **[Lesson 4: Redirection & Pipes](04_redirection-pipes.md)**
+Continue to: **[Lesson 4: Redirection & Pipes]({{ "/lessons/04_redirection-pipes" | relative_url }})**

@@ -158,4 +158,4 @@ If something didn’t work, take a screenshot or copy the error text and share i
 
 When you’re set up, continue to:
 
-**[Lesson 1: What is the Command Line?](01_what-is-cli.md)**
+**[Lesson 1: What is the Command Line?]({{ "/lessons/01_what-is-cli" | relative_url }})**

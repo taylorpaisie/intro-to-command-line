@@ -285,7 +285,7 @@ grep "JAN" demo.csv > demo_JAN.csv
 1. Create a small file:
    ```bash
    cd ~/cli-practice
-   echo -e "C\nA\nB\nD" > letters.txt
+   printf "C\nA\nB\nD\n" > letters.txt
    ```
 2. Use `sort letters.txt` to see the sorted output.
 3. Use `sort letters.txt | head -n 2` to see only the first two.
@@ -362,4 +362,4 @@ grep "JAN" demo.csv > demo_JAN.csv
 
 Next you’ll learn how to save frequently used commands and small workflows as **aliases and simple scripts**, so you can run them with just a few keystrokes.
 
-Continue to: **[Lesson 5: Aliases & Simple Scripts](05_aliases-scripts.md)**
+Continue to: **[Lesson 5: Aliases & Simple Scripts]({{ "/lessons/05_aliases-scripts" | relative_url }})**

@@ -25,13 +25,13 @@ No prior experience required. If you can type and hit Enter, you’re qualified.
 
 ## Lessons
 
-0. [Windows + WSL Setup (Ubuntu)](lessons/00_windows-setup.md)  
-1. [What is the Command Line?](lessons/01_what-is-cli.md)  
-2. [Moving Around (cd, pwd, ls)](lessons/02_navigation.md)  
-3. [Working with Files & Directories](lessons/03_files-and-dirs.md)  
-4. [Redirection & Pipes](lessons/04_redirection-pipes.md)  
-5. [Aliases & Simple Scripts](lessons/05_aliases-scripts.md)  
-6. [Quick Reference & Next Steps](lessons/06_cheatsheet.md)  
+0. [Windows + WSL Setup (Ubuntu)]({{ "/lessons/00_windows-setup" | relative_url }})  
+1. [What is the Command Line?]({{ "/lessons/01_what-is-cli" | relative_url }})  
+2. [Moving Around (cd, pwd, ls)]({{ "/lessons/02_navigation" | relative_url }})  
+3. [Working with Files & Directories]({{ "/lessons/03_files-and-dirs" | relative_url }})  
+4. [Redirection & Pipes]({{ "/lessons/04_redirection-pipes" | relative_url }})  
+5. [Aliases & Simple Scripts]({{ "/lessons/05_aliases-scripts" | relative_url }})  
+6. [Quick Reference & Next Steps]({{ "/lessons/06_cheatsheet" | relative_url }})  
 
 ---
 

@@ -269,4 +269,4 @@ Do these in your Ubuntu/WSL terminal.
 
 You now know how to turn repetitive command-line work into shortcuts and small scripts. In the final lesson, we’ll pull everything together into a quick reference and some suggested next steps for learning more.
 
-Continue to: **[Lesson 6: Quick Reference & Next Steps](06_cheatsheet.md)**
+Continue to: **[Lesson 6: Quick Reference & Next Steps]({{ "/lessons/06_cheatsheet" | relative_url }})**

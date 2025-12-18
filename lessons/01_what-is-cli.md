@@ -101,7 +101,7 @@ pwd
 
 **Example output:**
 ```
-/Users/tpaisie/Documents
+/Users/yourname/Documents
 ```
 
 ### `ls` - List
@@ -244,7 +244,7 @@ Congratulations! You've just executed your first commands. 🎉
 
 Ready to learn how to move around your file system? Continue to:
 
-**[Lesson 2: Moving Around (cd, pwd, ls)](02_navigation.md)**
+**[Lesson 2: Moving Around (cd, pwd, ls)]({{ "/lessons/02_navigation" | relative_url }})**
 
 ---
 

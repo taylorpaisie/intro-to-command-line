@@ -33,7 +33,7 @@ Your (Linux/WSL) file system is organized like an upside-down tree:
 ```
 /                           (root)
 ├── home/                   (directory)
-│   └── tpaisie/           (your user directory)
+│   └── yourname/          (your user directory)
 │       ├── Documents/
 │       │   ├── reports/
 │       │   └── data.xlsx
@@ -46,11 +46,11 @@ Your (Linux/WSL) file system is organized like an upside-down tree:
 ### Absolute vs Relative Paths
 
 **Absolute path**: The complete path from the root directory
-- Ubuntu/WSL: `/home/tpaisie/Documents/reports`
+- Ubuntu/WSL: `/home/yourname/Documents/reports`
 
 **Relative path**: The path from your current location
-- If you're in `/home/tpaisie/`, then `Documents/reports` is the relative path
-- If you're in `/home/tpaisie/Documents/`, then `reports` is the relative path
+- If you're in `/home/yourname/`, then `Documents/reports` is the relative path
+- If you're in `/home/yourname/Documents/`, then `reports` is the relative path
 
 ### Special Path Symbols
 
@@ -59,7 +59,7 @@ Your (Linux/WSL) file system is organized like an upside-down tree:
 | `.` | Current directory | `./file.txt` (file in current dir) |
 | `..` | Parent directory (one level up) | `cd ..` (go up one level) |
 | `~` | Your home directory | `cd ~` (go to home) |
-| `/` | Root directory (or path separator) | `/home/tpaisie` |
+| `/` | Root directory (or path separator) | `/home/yourname` |
 
 ---
 
@@ -77,7 +77,7 @@ pwd
 
 **In Ubuntu/WSL (and Mac/Linux):**
 ```
-/home/tpaisie/Documents/projects
+/home/yourname/Documents/projects
 ```
 
 ### When to use `pwd`
@@ -117,9 +117,9 @@ ls -l
 
 **Example output:**
 ```
-drwxr-xr-x  5 tpaisie  staff   160 Nov 15 10:30 Documents
-drwxr-xr-x  3 tpaisie  staff    96 Nov 14 09:15 Downloads
--rw-r--r--  1 tpaisie  staff  2048 Nov 16 14:20 report.txt
+drwxr-xr-x  5 yourname  staff   160 Nov 15 10:30 Documents
+drwxr-xr-x  3 yourname  staff    96 Nov 14 09:15 Downloads
+-rw-r--r--  1 yourname  staff  2048 Nov 16 14:20 report.txt
 ```
 
 - Lines starting with `d` are directories (folders)
@@ -152,9 +152,9 @@ ls -lh
 
 **Example output:**
 ```
-drwxr-xr-x  5 tpaisie  staff   160B Nov 15 10:30 Documents
--rw-r--r--  1 tpaisie  staff   2.0K Nov 16 14:20 report.txt
--rw-r--r--  1 tpaisie  staff   1.5M Nov 16 15:45 data.xlsx
+drwxr-xr-x  5 yourname  staff   160B Nov 15 10:30 Documents
+-rw-r--r--  1 yourname  staff   2.0K Nov 16 14:20 report.txt
+-rw-r--r--  1 yourname  staff   1.5M Nov 16 15:45 data.xlsx
 ```
 
 #### `ls -lah` (Combining options)
@@ -255,7 +255,7 @@ This is like a "back" button—it takes you to wherever you were before.
 #### Use absolute paths
 
 ```bash
-cd /home/tpaisie/Documents
+cd /home/yourname/Documents
 ```
 
 #### Combine with `..` and subdirectories
@@ -284,7 +284,7 @@ Here's a typical workflow combining all three commands:
 ```bash
 # Where am I?
 pwd
-# Output: /home/tpaisie
+# Output: /home/yourname
 
 # What's here?
 ls
@@ -295,7 +295,7 @@ cd Documents
 
 # Where am I now?
 pwd
-# Output: /home/tpaisie/Documents
+# Output: /home/yourname/Documents
 
 # What's in here?
 ls
@@ -517,7 +517,7 @@ cd $REPORTS       # Quickly jump to reports
 
 Now that you can navigate your file system, you're ready to start working with files and directories!
 
-Continue to: **[Lesson 3: Working with Files & Directories](03_files-and-dirs.md)**
+Continue to: **[Lesson 3: Working with Files & Directories]({{ "/lessons/03_files-and-dirs" | relative_url }})**
 
 ---
 
