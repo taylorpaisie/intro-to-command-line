@@ -3,6 +3,10 @@ description: "A gentle, practical intro to the command line for analysts and eng
 theme: jekyll-theme-cayman
 markdown: kramdown
 
+# Needed for the GitHub Pages / Cayman theme `site.github.*` metadata in CI.
+# Prevents: "No repo name found" during builds.
+repository: taylorpaisie/intro-to-command-line
+
 # For nicer URLs (optional)
 permalink: /:title/
 
